@@ -124,13 +124,23 @@ $(function(){
     });
 
     // click event prevent
+    function scrollToTarget(target, duration, callback) {
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, duration, callback);
+    }
+    
     $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         
         var target = this.hash;
-
-        $('html, body').animate({
-          scrollTop: $(target).offset().top
-        }, 600);
-      });
+    
+        if ($(this).closest('header .fixer').length) {
+            scrollToTarget(target, 500, function() {
+                $("header").removeClass("mobile");
+            });
+        } else {
+            scrollToTarget(target, 600);
+        }
+    });
 });
