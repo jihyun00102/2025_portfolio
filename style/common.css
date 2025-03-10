@@ -92,7 +92,7 @@ header .gnb li a:hover .char::after {
 }
 header .fixer {
   position: fixed;
-  top: -100%;
+  top: -110%;
   left: 0;
   padding: 1.5vw 3vw;
   width: 100%;
