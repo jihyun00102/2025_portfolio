@@ -1,4 +1,6 @@
 $(function(){
+    Splitting();
+
 
     $("header .mobile_btn").on("click",function () {
        $("header").toggleClass("mobile");
@@ -17,6 +19,9 @@ $(function(){
 
     gsap.registerPlugin(ScrollTrigger);
 
+    gsap.to('.preview',{opacity:0, "z-index":0, delay: 3,ease: Power4.easeIn});
+    gsap.to('.preview',{height:0, delay: 4,ease: Power4.easeIn});
+    
     // about
     function isMobile() {
         return $(window).width() <= 600;

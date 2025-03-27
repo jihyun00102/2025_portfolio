@@ -13,6 +13,49 @@
     transform: translateX(-50%);
 }
 
+.preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 6vw);
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        font-size: 6rem;
+        background-color: var(--black);
+
+        .char {
+            position: relative;
+            animation: jumping 1.75s infinite;
+
+            @keyframes jumping {
+                0% {
+                  top: 0;
+                }
+                50% {
+                  top: -10px;
+                }
+                100% {
+                  top: 0;
+                }
+              }
+
+              @for $i from 0 through 10 {
+                &:nth-child(#{$i + 1}) {
+                    animation-delay: #{$i * 0.2}s;
+                }
+            }
+        }
+    }
+}
+
 .intro {
     position: relative;
     height: 100vh;
