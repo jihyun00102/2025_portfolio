@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./image/favicon/favicon.ico">
     <title>portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <section class="preview">
-        <h2 data-splitting>LOADING...</h2>
+        <div class="f_container">
+            <div class="loader"></div>
+        </div>
     </section>
 
     <header>
@@ -42,19 +45,15 @@
     <section id="intro" class="intro">
         <video autoplay muted loop playinline preload="auto" poster="./image/intro_vid.jpg"><source src="./image/intro_vid.mp4" type="video/mp4"></video>
         <div class="main_text">
-            <p>
-                Exploring the
-                <br>
-                Orbit of
-                <br>
-                Imagination
-            </p>
+            <p class="headline"><span>Exploring the</span></p>
+            <p class="headline"><span>Orbit of</span></p>
+            <p class="headline"><span>Imagination</span></p>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="al_c">
-            <h2 class="tit">ABOUT ME</h2>
+            <h2 class="tit" data-aos="fade-up">ABOUT ME</h2>
         </div>
         <div class="about_txt">
             <div class="circle">Creative</div>
@@ -64,7 +63,7 @@
 
     <section id="work" class="work">
         <div class="al_c">
-            <h2 class="tit">PROJECT</h2>
+            <h2 class="tit" data-aos="fade-up">PROJECT</h2>
         </div>
 
         <div class="f_container">
@@ -72,11 +71,11 @@
                 <div class="col_item">
                     <a href="https://prism.sogang.ac.kr/" target="_blank">
                         <ul class="cont_tag">
-                            <li>#HTML</li>
-                            <li>#CSS</li>
-                            <li>#JQUERY</li>
-                            <li>#PHP</li>
-                            <li>#SLICK</li>
+                            <li data-text="#HTML">#HTML</li>
+                            <li data-text="#CSS">#CSS</li>
+                            <li data-text="#JQUERY">#JQUERY</li>
+                            <li data-text="#PHP">#PHP</li>
+                            <li data-text="#RENEWAL">#RENEWAL</li>
                         </ul>
                         <div class="item_img" style="background-image: url(./image/sogang.png);">
                         </div>
@@ -88,11 +87,11 @@
                 <div class="col_item">
                     <a href="https://www.bbits.ac.kr/" target="_blank">
                         <ul class="cont_tag">
-                            <li>#HTML</li>
-                            <li>#CSS</li>
-                            <li>#JQUERY</li>
-                            <li>#PHP</li>
-                            <li>#SWIPER</li>
+                            <li data-text="#HTML">#HTML</li>
+                            <li data-text="#CSS">#CSS</li>
+                            <li data-text="#JQUERY">#JQUERY</li>
+                            <li data-text="#PHP">#PHP</li>
+                            <li data-text="#WIDGET">#WIDGET</li>
                         </ul>
                         <div class="item_img" style="background-image: url(./image/bbits.jpg);"></div>
                         <div class="item_cont">
@@ -103,11 +102,11 @@
                 <div class="col_item">
                     <a href="https://jb.jst.ac.kr/" target="_blank">
                         <ul class="cont_tag">
-                            <li>#HTML</li>
-                            <li>#CSS</li>
-                            <li>#JQUERY</li>
-                            <li>#PHP</li>
-                            <li>#FULLPAGE</li>
+                            <li data-text="#HTML">#HTML</li>
+                            <li data-text="#CSS">#CSS</li>
+                            <li data-text="#JQUERY">#JQUERY</li>
+                            <li data-text="#PHP">#PHP</li>
+                            <li data-text="#FULLPAGE">#FULLPAGE</li>
                         </ul>
                         <div class="item_img" style="background-image: url(./image/jst.jpg);"></div>
                         <div class="item_cont">
@@ -118,10 +117,11 @@
                 <div class="col_item">
                     <a href="https://www.biblemove.com/ " target="_blank">
                         <ul class="cont_tag">
-                            <li>#HTML</li>
-                            <li>#CSS</li>
-                            <li>#JQUERY</li>
-                            <li>#PHP</li>
+                            <li data-text="#HTML">#HTML</li>
+                            <li data-text="#CSS">#CSS</li>
+                            <li data-text="#JQUERY">#JQUERY</li>
+                            <li data-text="#PHP">#PHP</li>
+                            <li data-text="#SLIDE">#SLIDE</li>
                         </ul>
                         <div class="item_img" style="background-image: url(./image/bible.jpg);"></div>
                         <div class="item_cont">
@@ -132,11 +132,11 @@
                 <div class="col_item">
                     <a href="https://hrd.ktr.or.kr/" target="_blank">
                         <ul class="cont_tag">
-                            <li>#HTML</li>
-                            <li>#CSS</li>
-                            <li>#JQUERY</li>
-                            <li>#PHP</li>
-                            <li>#SLIDE</li>
+                            <li data-text="#HTML">#HTML</li>
+                            <li data-text="#CSS">#CSS</li>
+                            <li data-text="#JQUERY">#JQUERY</li>
+                            <li data-text="#PHP">#PHP</li>
+                            <li data-text="#SUBPAGE">#SUBPAGE</li>
                         </ul>
                         <div class="item_img" style="background-image: url(./image/ktr.jpg);"></div>
                         <div class="item_cont">
@@ -150,41 +150,41 @@
 
     <section class="extra_work">
         <div class="al_c">
-            <h2 class="tit">MORE WORK</h2>
+            <h2 class="tit" data-aos="fade-up">MORE WORK</h2>
         </div>
 
         <ul class="extra_list">
-            <li data-img="ktr">
+            <li data-img="ktr" data-aos="fade-up">
                 <a href="https://ujc.hywoman.ac.kr/ko/" target="_blank">
                     <div class="list_tit">한양여자대학교</div>
                     <div class="explan">리뉴얼 퍼블리싱 작업과 잡코리아 API를 사용한 공고 리스트 위젯화</div>
                 </a>
             </li>
-            <li data-img="bbits">
+            <li data-img="bbits" data-aos="fade-up">
                 <a href="https://counsel.snjc.ac.kr/ko/" target="_blank">
                     <div class="list_tit">서울여자간호대학교</div>
                     <div class="explan">메인 페이지 리뉴얼 작업</div>
                 </a>
             </li>
-            <li data-img="sogang">
+            <li data-img="sogang" data-aos="fade-up">
                 <a href="https://ictl.yonsei.ac.kr/" target="_blank">
                     <div class="list_tit">연세대 교수학습 지원센터</div>
                     <div class="explan">메인페이지 리뉴얼</div>
                 </a>
             </li>
-            <li data-img="jst">
+            <li data-img="jst" data-aos="fade-up">
                 <a href="https://pss.hallym.ac.kr/" target="_blank">
                     <div class="list_tit">한림대 성과물 사이트</div>
                     <div class="explan">PHP를 사용한 서브페이지 템플릿 작업</div>
                 </a>
             </li>
-            <li data-img="biblemove">
+            <li data-img="biblemove" data-aos="fade-up">
                 <a href="https://hylu-s.hanyang.ac.kr/" target="_blank">
                     <div class="list_tit">한양대 비교과 공지사항 크롤링</div>
                     <div class="explan">웹크롤링으로 한양대학교 공지사항 게시판 구성</div>
                 </a>
             </li>
-            <li>
+            <li data-aos="fade-up">
                 <a href="https://edu.ktr.or.kr/" target="_blank">
                     <div class="list_tit">한국화학융합시험연구원 아카데미</div>
                     <div class="explan">전반적인 홈페이지 리뉴얼과 서브페이지 템플릿 퍼블리싱</div>
@@ -207,6 +207,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="./js/plugin/splitting.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

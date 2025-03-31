@@ -5,6 +5,7 @@
   --font-ko: NotoSansKR, sans-serif;
   --font-en: Questrial, sans-serif;
   --font-en-point: Cormorant, sans-serif;
+  --c:#fff 92%,#0000;
   --about-left: 0;
   --about-right: 0;
   --contact--transform: 100%;
@@ -67,7 +68,7 @@ header .gnb li a .char::before {
   top: 0;
   left: 0;
   opacity: 0.6;
-  color: #fff;
+  color: var(--white);
   content: attr(data-char);
   transition: all 0.35s;
   transition-delay: calc(30ms * var(--char-index));
@@ -78,7 +79,7 @@ header .gnb li a .char::after {
   top: 0;
   left: 0;
   opacity: 0.6;
-  color: #fff;
+  color: var(--white);
   content: attr(data-char);
   transition: all 0.35s;
   transition-delay: calc(30ms * var(--char-index));
@@ -188,6 +189,10 @@ section {
   width: calc(100% - 6vw);
   background: var(--black);
   color: var(--white);
+}
+
+.f_container {
+  display: flex;
 }
 
 .al_c {

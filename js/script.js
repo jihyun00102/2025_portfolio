@@ -1,6 +1,6 @@
 $(function(){
     Splitting();
-
+    AOS.init();
 
     $("header .mobile_btn").on("click",function () {
        $("header").toggleClass("mobile");
@@ -19,9 +19,26 @@ $(function(){
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('.preview',{opacity:0, "z-index":0, delay: 3,ease: Power4.easeIn});
-    gsap.to('.preview',{height:0, delay: 4,ease: Power4.easeIn});
+    // preview
+    gsap.to('.preview',{opacity:0, "z-index":0, delay: 2.5,ease: Power4.easeIn});
+    gsap.to('.preview',{height:0, delay: 3,ease: Power4.easeIn});
     
+    // intro
+    gsap.timeline({
+        onComplete:function(){
+          visualTextAni.play();
+        }
+    });
+
+    gsap.set('.main_text .headline span',{yPercent:100})
+    const visualTextAni = gsap.to('.main_text .headline span',{
+      paused:true,
+      yPercent:0,
+      ease: Power4.easeInOut,
+      delay: 2.35,
+      duration: 0.8
+    });
+
     // about
     function isMobile() {
         return $(window).width() <= 600;
